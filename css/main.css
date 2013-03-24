@@ -1,0 +1,101 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+html{
+	height: 100%;
+}
+
+
+body { 
+	background: transparent url('../img/bg.jpg') no-repeat scroll;
+	background-position: center bottom;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	margin: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333333;
+	background-color: #ffffff;
+
+}
+
+.container {color: #fff;}
+
+.container .hero-unit { 
+	background: transparent url('../img/box_bg.png') !important;
+	background-repeat: repeat;
+	border: 1px solid #fff;
+}
+
+.container .main-content div.well {background:  transparent url('../img/box_bg.png'); height: 230px; overflow: hidden;}
+
+.container .main-content {margin-top: 450px;}
+
+@media only screen and (max-width: 1920px) and (orientation: landscape) {
+	.container .main-content {margin-top: 150px !important;}
+}
+
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+	body {
+		background: transparent url('../img/bg_medium.jpg') no-repeat scroll;
+		background-position: center bottom;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+
+	}
+
+	.container .main-content {margin-top: 150px !important;}
+
+}
+
+
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+	body {
+		background: transparent url('../img/bg_medium.jpg') 50% 0 no-repeat scroll !important;
+		background-position: center bottom;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+
+	}
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	body { 
+		background: url('../img/bg_medium.jpg') -50% 80% no-repeat scroll !important;
+		background-position:center bottom;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+	}
+
+	.container .main-content {margin-top: 50px !important;}
+}
+
+
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+	body { 
+		background: url('../img/bg_medium.jpg') 75% 80% no-repeat scroll !important;
+		background-position:center bottom;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		font-size: 11px !important;
+	}
+
+	.container .main-content {margin-top: 20px !important;}
+}
+
+
