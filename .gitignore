@@ -1,0 +1,24 @@
+# Bootstrap
+app/bootstrap*
+
+#Netbeans
+nbproject/*
+
+
+# Symfony directories
+vendor/*
+*/logs/*
+*/cache/*
+web/uploads/*
+web/bundles/*
+
+# Configuration files
+app/config/parameters.ini
+app/config/parameters.yml
+/src/Acme/
+/post-deploy-output.txt
+bart2.pem
+/web/info.php
+/web/apc.php.elasticbeanstalk/
+composer.lock
+
