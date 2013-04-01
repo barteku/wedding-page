@@ -1,0 +1,42 @@
+{% extends "AcmeDemoBundle::layout.html.twig" %}
+
+{% block title "Joasia i Bartek" %}
+
+{% block content %}
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <div class="hero-unit">
+        <h1>Joasia & Bartek</h1><br/>
+        <p>Trzy czwarte z miłości, dwie piąte z rozsądku, ciut z wyrachowania, trochę dla porządku, kapkę dla tradycji, tyci dla reklamy, oświadczamy wszystkim, że się pobieramy!</p>
+
+    </div>
+
+    <!-- Example row of columns -->
+    <div class="row main-content">
+        <div class="span4">
+            <div class="well well-large">
+                <h2>1 Czerwca 2013</h2>
+                <ol>
+                    <li>12:45 zbiórka w USC w Gdyni</li>
+                    <li>13:30 życzenia</li>
+                    <li>14:00 zmiana garderoby</li>
+                    <li>14:15 ruszamy ...</li>
+                    <li>...</li>
+                    <li>04:00 koniec imprezy</li>
+                </ol>
+            </div>
+        </div>
+        <div class="span4 ">
+            <div class="well well-large">
+                <h2>Odzienie</h2>
+                <p>Dla wygody prosimy by spilki, mokasyny, sukienki, garnitury zostaly w szafie/samochodzie. Zapraszamy na luzaku, w jeansach, tramkach i koszulkach. W razie gdy pogoda nie dopisze, moga przydac sie kalosze.</p>
+            </div>
+       </div>
+        <div class="span4">
+            <div class="well well-large">
+                <h2>Rejestracja</h2>
+                <p>W związku z brakiem czasu i funduszy na zaproszenia, bardzo prosimy o potwierdzenie Swojej obecnocności klikając w poniższy link.</p><br/>
+                <p><a class="btn" href="{{ path('registration') }}">Rejestracja &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
