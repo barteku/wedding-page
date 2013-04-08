@@ -310,4 +310,27 @@ class Guest {
     {
         return $this->partner;
     }
+
+    /**
+     * Set locale
+     *
+     * @param string $locale
+     * @return Guest
+     */
+    public function setLocale($locale)
+    {
+        $this->locale = $locale;
+    
+        return $this;
+    }
+
+    /**
+     * Get locale
+     *
+     * @return string 
+     */
+    public function getLocale()
+    {
+        return $this->locale;
+    }
 }
