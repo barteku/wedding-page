@@ -32,7 +32,7 @@ body {
 	border: 1px solid #fff;
 }
 
-.container .main-content div.well {background: url('../img/box_bg.png'); height: 230px; overflow: hidden;}
+.container .main-content div.well {background: url('../img/box_bg.png'); min-height: 230px; height:auto;  overflow: hidden;}
 
 .container .main-content {margin-top: 450px;}
 
