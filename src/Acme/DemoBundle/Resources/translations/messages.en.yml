@@ -48,4 +48,6 @@ mainmenu-contact: Contact
 
 registration-thankyou: >
   <h2>Thank you for filling out the registration form </h2>
-  <p>See you at the wedding </ p>
+  <p>See you at the wedding </p>
+  
+submit: submit

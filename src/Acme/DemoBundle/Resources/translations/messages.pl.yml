@@ -53,3 +53,5 @@ mainmenu-contact: Kontakt
 registration-thankyou: >
   <h2>Dziekujemy za wypelnienie formularza rejestracyjnego!</h2>
   <p>Do zobaczenia na weselu</p>
+  
+submit: zapisz
