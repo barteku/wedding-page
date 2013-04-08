@@ -1,7 +1,7 @@
 contact: contact
 Joasia i Bartek: Joasia & Bartek
 phone: phone
-motto: Three-quarters of love, two fifths of convenience, a bit of convenience, some for the record, I got a little for tradition, itty for advertising, declare, that we're getting married!
+motto: Three-fourths of love, two-fifths of reason, a bit of convenience, some for the order, drop for tradition, little for advertising, declare, that we are getting married!
 index-first-container: >
     <h2>1st June 2013</h2>
       <ol>
@@ -14,7 +14,7 @@ index-first-container: >
       </ol>
 index-second-container: >
     <h2>Clothing</h2>
-    <p>For your convenience, please be heels, loafers, dresses, suits have been in the closet / car. Welcome to luzaku, in jeans, sneakers and T-shirts. If the weather does not sign, they can be useful boots.</p>
+    <p>For your own comfort, we would like to ask you to leave hills, moccasins, dresses and suits in car/ wardrobe.<br/>We will keep easy dress code, so please wear jeans, trainers and T-shirts. In case if weather will not be so nice, wellingtons might be useful. </p>
 index-third-container: >
     <h2>Registration</h2>
     <p>Due to the lack of time for the call, please do not hesitate to confirm your presence by clicking the link below.</p><br/>
@@ -45,3 +45,7 @@ place-title: Where
 mainmenu-place: Place
 mainmenu-registration: Registration
 mainmenu-contact: Contact
+
+registration-thankyou: >
+  <h2>Thank you for filling out the registration form </h2>
+  <p>See you at the wedding </ p>
