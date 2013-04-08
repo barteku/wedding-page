@@ -9,7 +9,7 @@ html{
 
 
 body { 
-	background: transparent url('../img/bg.jpg') no-repeat scroll;
+	background: #7F6C5D url('../img/bg.jpg') no-repeat scroll;
 	background-position: center bottom;
 	background-size: cover;
 	-webkit-background-size: cover;
@@ -32,7 +32,7 @@ body {
 	border: 1px solid #fff;
 }
 
-.container .main-content div.well {background:  transparent url('../img/box_bg.png'); height: 230px; overflow: hidden;}
+.container .main-content div.well {background: url('../img/box_bg.png'); height: 230px; overflow: hidden;}
 
 .container .main-content {margin-top: 450px;}
 
@@ -42,7 +42,7 @@ body {
 
 @media only screen and (max-width: 1024px) and (orientation: landscape) {
 	body {
-		background: transparent url('../img/bg_medium.jpg') no-repeat scroll;
+		background: #7F6C5D url('../img/bg_medium.jpg') no-repeat scroll;
 		background-position: center bottom;
 		background-size: cover;
 		-webkit-background-size: cover;
@@ -58,7 +58,7 @@ body {
 
 @media only screen and (max-width: 1024px) and (orientation: landscape) {
 	body {
-		background: transparent url('../img/bg_medium.jpg') 50% 0 no-repeat scroll !important;
+		background: #7F6C5D url('../img/bg_medium.jpg') 50% 0 no-repeat scroll !important;
 		background-position: center bottom;
 		background-size: cover;
 		-webkit-background-size: cover;
@@ -71,7 +71,7 @@ body {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	body { 
-		background: url('../img/bg_medium.jpg') -50% 80% no-repeat scroll !important;
+		background: #7F6C5D url('../img/bg_medium.jpg') 50% 0% no-repeat scroll !important;
 		background-position:center bottom;
 		background-size: cover;
 		-webkit-background-size: cover;
@@ -86,8 +86,7 @@ body {
 
 @media only screen and (min-width: 0px) and (max-width: 767px) {
 	body { 
-		background: url('../img/bg_medium.jpg') 75% 80% no-repeat scroll !important;
-		background-position:center bottom;
+		background: #7F6C5D url('../img/bg_medium.jpg') 50% 0% no-repeat scroll !important;
 		background-size: cover;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -96,6 +95,7 @@ body {
 	}
 
 	.container .main-content {margin-top: 20px !important;}
+          .container .main-content div.well {min-height: 130px; height: auto }
 }
 
 

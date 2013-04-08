@@ -45,9 +45,9 @@ class GuestFieldSubscriber implements EventSubscriberInterface {
         // check if the product object is "new"
         if ($data->getId()) {
             if($data->getHasPartner()){
-                $form->add($this->factory->createNamed('partner','number', null, array('label' => "osoba towarzysząca")));
+                $form->add($this->factory->createNamed('partner','number', null, array('label' => "partner-label")));
             }
-            $form->add($this->factory->createNamed('confirmed','checkbox'));
+            $form->add($this->factory->createNamed('confirmed','checkbox', array('confirmed-label')));
             
         }else{
             $form->add($this->factory->createNamed('token','text'));

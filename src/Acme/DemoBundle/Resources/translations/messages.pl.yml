@@ -1,0 +1,46 @@
+contact: Kontakt
+Joasia i Bartek: Joasia i Bartek
+phone: telefon
+motto: Trzy czwarte z miłości, dwie piąte z rozsądku, ciut z wyrachowania, trochę dla porządku, kapkę dla tradycji, tyci dla reklamy, oświadczamy wszystkim, że się pobieramy!
+index-first-container: >
+    <h2>1 Czerwca 2013</h2>
+      <ol>
+          <li>12:45 zbiórka w USC w Gdyni</li>
+          <li>13:30 życzenia</li>
+          <li>14:00 zmiana garderoby</li>
+          <li>14:15 ruszamy ...</li>
+          <li>...</li>
+          <li>04:00 koniec imprezy</li>
+      </ol>
+index-second-container: >
+  <h2>Odzienie</h2>
+    <p>Dla wygody prosimy by szpilki, mokasyny, sukienki, garnitury zostały w szafie/samochodzie. Zapraszamy na luzaku, w jeansach, trampkach i koszulkach. W razie gdy pogoda nie dopisze, moga przydać się kalosze.</p>
+index-third-container: >
+  <h2>Rejestracja</h2>
+    <p>W związku z brakiem czasu na zaproszenia, bardzo prosimy o potwierdzenie Swojej obecnocności klikając w poniższy link.</p><br/>
+    <p><a class="btn" href="%registration_link%">Rejestracja &raquo;</a></p>
+
+rejestracja-title: Rejestracja
+
+rejetracja-text: >
+  <h2>Witaj %guest%</h2>
+  <p>W celu potwierdzenia swojej obecnosci prosze poprawnie wypełnic poniższy formularz:</p>
+  
+partner-label: osoba towarzyszaca
+confirmed-label: potwierdzam
+
+place-text: >
+  <h2>Szczegóły</h2>
+  <p>Spotykamy się pod Urzędem Stanu Cywilnego w Gdyni.</p>
+  <p>Będzie mozliwość załapania się do autokaru po drodze z Rumi do Gdyni</p>
+  <p>
+      Aleja Marszałka Piłsudskiego 52/54<br/>
+      81-382 Gdynia
+  </p>
+  
+place-title: Gdzie
+
+
+mainmenu-place: Miejsce
+mainmenu-registration: Rejestracja
+mainmenu-contact: Kontakt

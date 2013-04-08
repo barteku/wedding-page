@@ -3,12 +3,13 @@
 {% block title "Joasia i Bartek - rejestracja" %}
 
 {% block content %}
-    <div class="row"><div class="span12"><h1>Rejetracja</h1></div></div>
+    <div class="hero-unit">
+        <h1>Rejestracja</h1>
+    </div>
     <div class="row main-content">
        <div class="span12">
             <div class="well well-large">
-                <h2>Witaj {{ guest }}</h2>
-                <p>W celu potwierdzenia swojej obecnosci prosze poprawnie wypełnic poniższy formularz</p>
+                {{ 'rejetracja-text'|trans({'%guest%': guest})|raw }}
                 <p>
                     <form method="post">
                         {{ form_widget(form) }}

@@ -1,0 +1,45 @@
+contact: contact
+Joasia i Bartek: Joasia & Bartek
+phone: phone
+motto: Three-quarters of love, two fifths of convenience, a bit of convenience, some for the record, I got a little for tradition, itty for advertising, declare, that we're getting married!
+index-first-container: >
+    (EN)<h2>1st June 2013</h2>
+      <ol>
+          <li>12:45 zbiórka w USC w Gdyni</li>
+          <li>13:30 życzenia</li>
+          <li>14:00 zmiana garderoby</li>
+          <li>14:15 ruszamy ...</li>
+          <li>...</li>
+          <li>04:00 koniec imprezy</li>
+      </ol>
+index-second-container: >
+    <h2>Clothing</h2>
+    <p>For your convenience, please be heels, loafers, dresses, suits have been in the closet / car. Welcome to luzaku, in jeans, sneakers and T-shirts. If the weather does not sign, they can be useful boots.</p>
+index-third-container: >
+    <h2>Registration</h2>
+    <p>Due to the lack of time for the call, please do not hesitate to confirm your presence by clicking the link below.</p><br/>
+    <p><a class="btn" href="%registration_link%">Register &raquo;</a></p>
+    
+rejestracja-title: Registration
+
+rejetracja-text: >
+  <h2>Hello %guest%</h2>
+  <p>To confirm your presence please complete the form below correctly:</p>
+  
+partner-label: partner
+confirmed-label: I confirm
+
+place-text: >
+  <h2>Details</h2>
+  <p>We meet at the Civil Status Office in Gdynia.</p>
+  <p>It will be catching a venereal possibility to coach the way of Rumia to Gdynia</p>
+  <p>
+      Aleja Marszałka Piłsudskiego 52/54<br/>
+      81-382 Gdynia
+  </p>
+  
+place-title: Where
+
+mainmenu-place: Place
+mainmenu-registration: Registration
+mainmenu-contact: Contact

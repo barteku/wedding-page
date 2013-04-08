@@ -3,7 +3,9 @@
 {% block title "Joasia i Bartek" %}
 
 {% block content %}
-    <div class="row"><div class="span12"><h1>Gdzie?</h1></div></div>
+    <div class="hero-unit">
+        <h1>{{ 'place-title'|trans }}</h1>
+    </div>
     <div class="row main-content">
         <!--<div class="span6">
             <div class="well well-large">
@@ -21,13 +23,7 @@
         -->
         <div class="span6">
             <div class="well well-large">
-                <h2>Szczegóły</h2>
-                <p>Spotykamy się pod Urzędem Stanu Cywilnego w Gdyni.</p>
-                <p>Będzie mozliwość załapania się do autokaru po drodze z Rumi do Gdyni</p>
-                <p>
-                    Aleja Marszałka Piłsudskiego 52/54
-                    81-382 Gdynia
-                </p>
+                {{ 'place-text'|trans|raw }}
             </div>
         </div>
         <div class="span6">

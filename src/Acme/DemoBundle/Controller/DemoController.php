@@ -9,49 +9,49 @@ use Acme\DemoBundle\Form\ContactType;
 // these import the "@Route" and "@Template" annotations
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
-
 use Acme\DemoBundle\Entity\Guest;
 use Acme\DemoBundle\Form\Type\GuestType;
+use Symfony\Component\HttpFoundation\Request;
 
+
+/**
+ * @Route("/", name="homepage")
+ * @Template()
+ */
 class DemoController extends Controller
 {
     /**
      * @Route("/", name="homepage")
      * @Template()
      */
-    public function indexAction()
+    public function indexAction(Request $request)
+    {
+        $ln = $request->getPreferredLanguage(array('pl','en'));
+        
+        return $this->redirect($this->generateUrl('homepage_locale', array('_locale' => $ln)), 301);
+    }
+    
+    /**
+     * @Route("/{_locale}", name="homepage_locale", defaults={"_locale": "pl"}, requirements={"_locale": "pl|en"})
+     * @Template("AcmeDemoBundle:Demo:index.html.twig")
+     */
+    public function indexLocaleAction()
     {
         return array();
     }
     
     
     /**
-     * @Route("/contact", name="_demo_contact")
+     * @Route("/{_locale}/contact", name="contact", defaults={"_locale": "pl"}, requirements={"_locale": "pl|en"})
      * @Template()
      */
     public function contactAction()
     {
-        $form = $this->get('form.factory')->create(new ContactType());
-
-        $request = $this->get('request');
-        if ('POST' == $request->getMethod()) {
-            $form->bindRequest($request);
-            if ($form->isValid()) {
-                $mailer = $this->get('mailer');
-                // .. setup a message and send it
-                // http://symfony.com/doc/current/cookbook/email.html
-
-                $this->get('session')->setFlash('notice', 'Message sent!');
-
-                return new RedirectResponse($this->generateUrl('_demo'));
-            }
-        }
-
-        return array('form' => $form->createView());
+        return array();
     }
     
     /**
-     * @Route("/registration/complete", name="registration-complete")
+     * @Route("/{_locale}/registration/complete", name="registration-complete", defaults={"_locale": "pl"}, requirements={"_locale": "pl|en"})
      * @Template()
      */
     public function registrationCompleteAction()
@@ -60,12 +60,13 @@ class DemoController extends Controller
     }
     
     /**
-     * @Route("/registration/{token}", name="registration", defaults={"token" : ""})
+     * @Route("/{_locale}/registration/{token}", name="registration", defaults={"token" : "", "_locale": "pl"}, requirements={"_locale": "pl|en"})
      * @Template()
      */
     public function registrationAction($token)
     {
         $em = $this->getDoctrine()->getEntityManager();
+        
         $guest = $em->getRepository('AcmeDemoBundle:Guest')->findOneBy(array('token'=>$token));
         
         if(!($guest instanceof Guest)){
@@ -97,7 +98,7 @@ class DemoController extends Controller
     
     
     /**
-     * @Route("/place", name="place")
+     * @Route("/{_locale}/place", name="place", defaults={"_locale": "pl"}, requirements={"_locale": "pl|en"})
      * @Template()
      */
     public function placeAction()

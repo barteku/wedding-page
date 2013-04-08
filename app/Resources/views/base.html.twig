@@ -11,15 +11,15 @@
         <meta name="viewport" content="width=device-width">
         
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
             <style>
                 body {
                     padding-top: 60px;
                     padding-bottom: 40px;
                 }
             </style>
-            <link rel="stylesheet" href="{{ asset('/css/bootstrap-responsive.min.css') }}"/>
-            <link rel="stylesheet" href="{{ asset('/css/main.css') }}"/>
+            <link rel="stylesheet" href="{{ asset('css/bootstrap-responsive.min.css') }}"/>
+            <link rel="stylesheet" href="{{ asset('css/main.css') }}"/>
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
@@ -33,10 +33,10 @@
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
             <script>window.jQuery || document.write('<script src="{{ asset('/js/vendor/jquery-1.9.1.min.js') }}"><\/script>')</script>
 
-            <script src="{{ asset('/js/vendor/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
 
-            <script src="{{ asset('/js/plugins.js') }}"></script>
-            <script src="{{ asset('/js/main.js') }}"></script>  
+            <script src="{{ asset('js/plugins.js') }}"></script>
+            <script src="{{ asset('js/main.js') }}"></script>  
         {% endblock %}
     </body>
 </html>

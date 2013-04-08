@@ -11,13 +11,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="{{ path('homepage') }}">Joasia & Bartek</a>
+                    <a class="brand" href="{{ path('homepage_locale', {'_locale': app.request.locale}) }}">Joasia & Bartek</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li class="active"><a href="{{ path('homepage') }}">Home</a></li>
-                            <li><a href="{{ path('place') }}">Miejsce</a></li>
-                            <li><a href="#contact">Kontakt</a></li>
-                            
+                            <li class="active"><a href="{{ path('homepage_locale', {'_locale': app.request.locale}) }}">Home</a></li>
+                            <li><a href="{{ path('place', {'_locale': app.request.locale}) }}">{{ 'mainmenu-place'|trans }}</a></li>
+                            <li><a href="{{ path('registration', {'_locale': app.request.locale}) }}">{{ 'mainmenu-registration'|trans }}</a></li>
+                            <li><a href="{{ path('contact', {'_locale': app.request.locale}) }}">{{ 'mainmenu-contact'|trans }}</a></li>
                         </ul>
                         
                     </div><!--/.nav-collapse -->

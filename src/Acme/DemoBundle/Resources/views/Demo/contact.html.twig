@@ -1,15 +1,32 @@
 {% extends "AcmeDemoBundle::layout.html.twig" %}
 
-{% block title "Symfony - Contact form" %}
+{% block title "Joasia i Bartek"|trans %}
 
 {% block content %}
-    <form action="{{ path('_demo_contact') }}" method="POST" id="contact_form">
-        {{ form_errors(form) }}
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <div class="hero-unit">
+        <h1>{{'contact'|trans}}</h1>
+    </div>
 
-        {{ form_row(form.email) }}
-        {{ form_row(form.message) }}
-
-        {{ form_rest(form) }}
-        <input type="submit" value="Send" class="symfony-button-grey" />
-    </form>
+    <!-- Example row of columns -->
+    <div class="row main-content">
+        <div class="span6">
+            <div class="well well-large">
+                <h2>Joasia</h2>
+                <ul>
+                    <li>{{ 'phone'|trans }}:</li>
+                    <li>email:</li>
+                </ul>
+            </div>
+        </div>
+        <div class="span6 ">
+            <div class="well well-large">
+                <h2>Bartek</h2>
+                <ul>
+                    <li>tel</li>
+                    <li>email</li>
+                </ul>
+            </div>
+       </div>
+    </div>
 {% endblock %}
