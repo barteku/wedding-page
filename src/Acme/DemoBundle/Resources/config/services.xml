@@ -20,7 +20,14 @@
             <argument></argument>
             <argument>Acme\DemoBundle\Entity\Guest</argument>
             <argument>SonataAdminBundle:CRUD</argument>
-            
         </service>
+        
+        <service id="acme.invitation.manager" class="Acme\DemoBundle\Manager\InvitationManager">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>Acme\DemoBundle\Entity\Guest</argument>
+            <argument type="service" id="mailer" />
+            <argument type="service" id="templating" />
+        </service>
+        
     </services>
 </container>

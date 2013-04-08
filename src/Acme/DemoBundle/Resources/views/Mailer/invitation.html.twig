@@ -1,0 +1,30 @@
+<body>
+    <h1 style="text-align: center">Zaproszenie</h1>
+    <h2 style="text-align: center">dla {{ guest.fullname }}</h2>
+
+    <div style="text-align: center; margin: 20px 0 50px 0; line-height: 21px; font-style: italic; font-size: 15px;">
+        <p>
+            w imieniu Rodziców i własnym<br/>
+            z radością zapraszają Sz. P. na swój Ślub,<br/>
+            wtóry odbędzie się dnia 01 czerwca 2013 roku<br/>
+            o godzinie 13.00 w USC w Gdyni.
+        </p>
+    </div>
+    <div>
+        <p>Z powodów logistycznych i czasowych zdecydowaliśmy sie na powiadomienia i zaproszenia,najszybszym źródłem - Internetem.<br/>
+            Wiecej informacji o dalszych działaniach na stronie <a href="www.joasia-i-bartek.pl">www.joasia-i-bartek.pl</a>
+        </p>
+        <p>
+            W celu potwierdzenia swojej obecności lub nieobecosci, prosimy o kliknięcie w poniższy link...<br/>
+            <a href="{{ url('registration', {'token' : guest.token}) }}">tutaj ...</a>
+        </p>
+    </div>
+    <div style="text-align: right; margin-top: 20px;">
+        <p>
+            Mamy nadzieje, że do zobaczenia 1 czerwca.<br/>
+            Joasia i Bartek
+        </p>
+    </div>
+    
+    
+</body>

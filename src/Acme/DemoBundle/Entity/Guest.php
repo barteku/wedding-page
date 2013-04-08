@@ -43,6 +43,12 @@ class Guest {
     protected $token;
     
     /**
+     * @ORM\Column(type="string", length=2)
+     * @var type string
+     */
+    protected $locale;
+    
+    /**
      * @ORM\Column(type="boolean")
      * @var type boolean
      */
