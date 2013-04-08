@@ -1,0 +1,33 @@
+imports:
+    - { resource: config.yml }
+
+monolog:
+    handlers:
+        main:
+            type:  stream
+            path:  "%kernel.logs_dir%/%kernel.environment%.log"
+            level: debug
+        nested:
+            type:  stream
+            path:  "%kernel.logs_dir%/%kernel.environment%.log"
+            level: debug
+
+swiftmailer:
+    delivery_address: urbanski.bartek@gmail.com
+
+doctrine:
+    dbal:
+        driver:   "%database_staging_driver%"
+        host:     "%database_staging_host%"
+        port:     "%database_staging_port%"
+        dbname:   "%database_staging_name%"
+        user:     "%database_staging_user%"
+        password: "%database_staging_password%"
+        
+#services:
+#    pdo:
+#      class: PDO
+#      arguments:
+#        - "mysql:host=%database_staging_host%;port=%database_staging_port%;dbname=%database_staging_name%"
+#        - %database_staging_user%
+#        - %database_staging_password%
