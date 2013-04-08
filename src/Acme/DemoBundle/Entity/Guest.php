@@ -46,7 +46,7 @@ class Guest {
      * @ORM\Column(type="string", length=2)
      * @var type string
      */
-    protected $locale;
+    protected $locale = 'pl';
     
     /**
      * @ORM\Column(type="boolean")

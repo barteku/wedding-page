@@ -53,7 +53,7 @@ class GuestAdmin extends BaseAdmin {
             ->add('first_name')
             ->add('last_name')
             ->add('email')
-            ->add('has_partner')
+            ->add('has_partner', null, array('required' => false))
         ;
     }
     

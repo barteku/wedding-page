@@ -120,4 +120,14 @@ class InvitationManager {
     }
     
     
+    public function sendAll(){
+        foreach($this->repository->findAll() as $guest){
+            $this->sendInvitation($guest);
+            
+        }
+        
+        
+    }
+    
+    
 }
