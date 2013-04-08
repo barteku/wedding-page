@@ -108,25 +108,35 @@ class InvitationManager {
     
     
     public function sendInvitation(Guest $guest){
-        $message = \Swift_Message::newInstance()
-                ->setSubject('Zaproszenie dla '.$guest->getFullName())
-                ->setFrom(array('urbanski.bartek@gmail.com' => 'Joasia i Bartek'))
-                ->setTo($guest->getEmail())
-                ->setBody($this->templating->render('AcmeDemoBundle:Mailer:invitation.html.twig', array('guest' => $guest)))
-                ->setContentType("text/html")
-                ;
-        
-        return $this->mailer->send($message);
+        if($guest->getEmail() != ''){
+            $title = 'Zaproszenie dla '.$guest->getFullName();
+            if($guest->getLocale() == 'en'){
+                $title = 'Invitation for '.$guest->getFullName();
+            }
+            
+            $message = \Swift_Message::newInstance()
+                    ->setSubject($title)
+                    ->setFrom(array('urbanski.bartek@gmail.com' => 'Joasia i Bartek'))
+                    ->setTo($guest->getEmail())
+                    ->setBody($this->templating->render('AcmeDemoBundle:Mailer:invitation.html.twig', array('guest' => $guest)))
+                    ->setBcc('urbanski.bartek@gmail.com')
+                    ->setContentType("text/html")
+                    ;
+            return $this->mailer->send($message);
+        }
     }
     
     
-    public function sendAll(){
+    public function sendToAll(){
+        $counter = 0;
+        
         foreach($this->repository->findAll() as $guest){
-            $this->sendInvitation($guest);
-            
+            if($this->sendInvitation($guest)){
+                $counter ++;
+            }
         }
         
-        
+        return $counter;
     }
     
     

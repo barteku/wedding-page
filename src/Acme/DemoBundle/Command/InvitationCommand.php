@@ -28,22 +28,20 @@ class InvitationCommand extends ContainerAwareCommand {
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $email = $input->getArgument('email');
-        $guests = 0;
+        $counter = 0;
         
         $im = $this->getContainer()->get('acme.invitation.manager');
         if($email != null){
             $guest = $im->findOneBy(array('email' => $email));
+            if($im->sendInvitation($guest)){
+                $counter++;
+            }
         }else{
-            $all = $im->findAll();
-        }
-        
-        
-        if($im->sendInvitation($guest)){
-            $guests++;
-        }
+            $counter = $im->sendToAll();
+        }       
         
 
-        $output->writeln(sprintf('sended to %s', $guests));
+        $output->writeln(sprintf('sended to %s', $counter));
     }
     
     
