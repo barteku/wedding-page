@@ -3,14 +3,14 @@ Joasia i Bartek: Joasia & Bartek
 phone: phone
 motto: Three-quarters of love, two fifths of convenience, a bit of convenience, some for the record, I got a little for tradition, itty for advertising, declare, that we're getting married!
 index-first-container: >
-    (EN)<h2>1st June 2013</h2>
+    <h2>1st June 2013</h2>
       <ol>
-          <li>12:45 zbiórka w USC w Gdyni</li>
-          <li>13:30 życzenia</li>
-          <li>14:00 zmiana garderoby</li>
-          <li>14:15 ruszamy ...</li>
+          <li>12:45 meeting at USC in Gdynia</li>
+          <li>13:30 wishes</li>
+          <li>14:00 change of clothes</li>
+          <li>14:15 set off ...</li>
           <li>...</li>
-          <li>04:00 koniec imprezy</li>
+          <li>04:00 end</li>
       </ol>
 index-second-container: >
     <h2>Clothing</h2>
@@ -37,6 +37,8 @@ place-text: >
       Aleja Marszałka Piłsudskiego 52/54<br/>
       81-382 Gdynia
   </p>
+  <p>Place, where we are taking you after the ceremony at Urząd Stanu Cywilnego (Town Hall), will stay our sweet secret. What we can tell you is that we are going to stay in Tricity.</p>
+  <p>As, we already had volunteers who wanted to buy sausages for the fire, we can ensure that you will find something to eat and drink.</p>
   
 place-title: Where
 
