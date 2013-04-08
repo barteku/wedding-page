@@ -63,7 +63,7 @@ class DemoController extends Controller
      * @Route("/{_locale}/registration/{token}", name="registration", defaults={"token" : "", "_locale": "pl"}, requirements={"_locale": "pl|en"})
      * @Template()
      */
-    public function registrationAction($token)
+    public function registrationAction($token, $_locale)
     {
         $em = $this->getDoctrine()->getEntityManager();
         
@@ -80,12 +80,12 @@ class DemoController extends Controller
             $form->bindRequest($request);
             if($form->isValid()){
                 if($form->has('token')){
-                    return $this->redirect($this->generateUrl('registration', array('token' => $form->get('token'))));
+                    return $this->redirect($this->generateUrl('registration', array('token' => $token, '_locale' => $_locale)));
                 }elseif($form->has('confirmed')){
                     $em->persist($guest);
                     $em->flush();
 
-                    return $this->redirect($this->generateUrl('registration-complete'));
+                    return $this->redirect($this->generateUrl('registration-complete', array('_locale' => $_locale)));
                 }
             }
         }

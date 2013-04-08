@@ -131,8 +131,11 @@ class InvitationManager {
         $counter = 0;
         
         foreach($this->repository->findAll() as $guest){
-            if($this->sendInvitation($guest)){
-                $counter ++;
+            if($guest->getId()>56){
+                if($this->sendInvitation($guest)){
+                    $counter ++;
+                    echo $guest->getEmail()."\n";
+                }
             }
         }
         
