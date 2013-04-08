@@ -47,7 +47,7 @@ class GuestFieldSubscriber implements EventSubscriberInterface {
             if($data->getHasPartner()){
                 $form->add($this->factory->createNamed('partner','number', null, array('label' => "partner-label")));
             }
-            $form->add($this->factory->createNamed('confirmed','checkbox', array('label' => 'confirmed-label')));
+            $form->add($this->factory->createNamed('confirmed','checkbox', null, array('label' => 'confirmed-label')));
             
         }else{
             $form->add($this->factory->createNamed('token','text'));
