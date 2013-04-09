@@ -14,10 +14,6 @@ use Acme\DemoBundle\Form\Type\GuestType;
 use Symfony\Component\HttpFoundation\Request;
 
 
-/**
- * @Route("/", name="homepage")
- * @Template()
- */
 class DemoController extends Controller
 {
     /**
@@ -27,8 +23,10 @@ class DemoController extends Controller
     public function indexAction(Request $request)
     {
         $ln = $request->getPreferredLanguage(array('pl','en'));
-        
-        return $this->redirect($this->generateUrl('homepage_locale', array('_locale' => $ln)), 301);
+        if($ln != 'pl' && $ln != "en"){
+          $ln = 'pl';
+        }
+        return new RedirectResponse($this->generateUrl('homepage_locale', array('_locale' => $ln)));
     }
     
     /**
@@ -79,8 +77,9 @@ class DemoController extends Controller
         if ('POST' == $request->getMethod()) {
             $form->bindRequest($request);
             if($form->isValid()){
+               
                 if($form->has('token')){
-                    return $this->redirect($this->generateUrl('registration', array('token' => $token, '_locale' => $_locale)));
+                    return $this->redirect($this->generateUrl('registration', array('token' => $guest->getToken(), '_locale' => $_locale)));
                 }elseif($form->has('confirmed')){
                     $em->persist($guest);
                     $em->flush();
