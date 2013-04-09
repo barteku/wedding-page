@@ -16,9 +16,22 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DemoController extends Controller
 {
+    /**
+     * @Route("/", name="homepage")
+     * @Template()
+     */
+    public function indexAction(Request $request)
+    {
+        $ln = $request->getPreferredLanguage(array('pl','en'));
+        if($ln != 'pl' && $ln != "en"){
+          $ln = 'pl';
+        }
+        
+        return new RedirectResponse($this->generateUrl('homepage_locale', array('_locale' => $ln)));
+    }
         
     /**
-     * @Route("/{_locale}", name="homepage_locale", defaults={"_locale": "pl"}, requirements={"_locale": "pl|en"})
+     * @Route("/{_locale}", name="homepage_locale", requirements={"_locale": "pl|en"})
      * @Template("AcmeDemoBundle:Demo:index.html.twig")
      */
     public function indexLocaleAction()
@@ -28,7 +41,7 @@ class DemoController extends Controller
     
     
     /**
-     * @Route("/{_locale}/contact", name="contact", defaults={"_locale": "pl"}, requirements={"_locale": "pl|en"})
+     * @Route("/{_locale}/contact", name="contact", requirements={"_locale": "pl|en"})
      * @Template()
      */
     public function contactAction()
@@ -37,7 +50,7 @@ class DemoController extends Controller
     }
     
     /**
-     * @Route("/{_locale}/registration/complete", name="registration-complete", defaults={"_locale": "pl"}, requirements={"_locale": "pl|en"})
+     * @Route("/{_locale}/registration/complete", name="registration-complete", requirements={"_locale": "pl|en"})
      * @Template()
      */
     public function registrationCompleteAction()
@@ -85,7 +98,7 @@ class DemoController extends Controller
     
     
     /**
-     * @Route("/{_locale}/place", name="place", defaults={"_locale": "pl"}, requirements={"_locale": "pl|en"})
+     * @Route("/{_locale}/place", name="place", requirements={"_locale": "pl|en"})
      * @Template()
      */
     public function placeAction()
