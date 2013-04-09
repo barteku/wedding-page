@@ -16,19 +16,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DemoController extends Controller
 {
-    /**
-     * @Route("/", name="homepage")
-     * @Template()
-     */
-    public function indexAction(Request $request)
-    {
-        $ln = $request->getPreferredLanguage(array('pl','en'));
-        if($ln != 'pl' && $ln != "en"){
-          $ln = 'pl';
-        }
-        return new RedirectResponse($this->generateUrl('homepage_locale', array('_locale' => $ln)));
-    }
-    
+        
     /**
      * @Route("/{_locale}", name="homepage_locale", defaults={"_locale": "pl"}, requirements={"_locale": "pl|en"})
      * @Template("AcmeDemoBundle:Demo:index.html.twig")
