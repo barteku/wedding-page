@@ -14,10 +14,6 @@ use Acme\DemoBundle\Form\Type\GuestType;
 use Symfony\Component\HttpFoundation\Request;
 
 
-/**
- * @Route("/", name="homepage")
- * @Template()
- */
 class DemoController extends Controller
 {
     /**
@@ -27,12 +23,15 @@ class DemoController extends Controller
     public function indexAction(Request $request)
     {
         $ln = $request->getPreferredLanguage(array('pl','en'));
+        if($ln != 'pl' && $ln != "en"){
+          $ln = 'pl';
+        }
         
-        return $this->redirect($this->generateUrl('homepage_locale', array('_locale' => $ln)), 301);
+        return new RedirectResponse($this->generateUrl('homepage_locale', array('_locale' => $ln)));
     }
-    
+        
     /**
-     * @Route("/{_locale}", name="homepage_locale", defaults={"_locale": "pl"}, requirements={"_locale": "pl|en"})
+     * @Route("/{_locale}", name="homepage_locale", requirements={"_locale": "pl|en"})
      * @Template("AcmeDemoBundle:Demo:index.html.twig")
      */
     public function indexLocaleAction()
@@ -42,7 +41,7 @@ class DemoController extends Controller
     
     
     /**
-     * @Route("/{_locale}/contact", name="contact", defaults={"_locale": "pl"}, requirements={"_locale": "pl|en"})
+     * @Route("/{_locale}/contact", name="contact", requirements={"_locale": "pl|en"})
      * @Template()
      */
     public function contactAction()
@@ -51,7 +50,7 @@ class DemoController extends Controller
     }
     
     /**
-     * @Route("/{_locale}/registration/complete", name="registration-complete", defaults={"_locale": "pl"}, requirements={"_locale": "pl|en"})
+     * @Route("/{_locale}/registration/complete", name="registration-complete", requirements={"_locale": "pl|en"})
      * @Template()
      */
     public function registrationCompleteAction()
@@ -79,8 +78,9 @@ class DemoController extends Controller
         if ('POST' == $request->getMethod()) {
             $form->bindRequest($request);
             if($form->isValid()){
+               
                 if($form->has('token')){
-                    return $this->redirect($this->generateUrl('registration', array('token' => $token, '_locale' => $_locale)));
+                    return $this->redirect($this->generateUrl('registration', array('token' => $guest->getToken(), '_locale' => $_locale)));
                 }elseif($form->has('confirmed')){
                     $em->persist($guest);
                     $em->flush();
@@ -98,7 +98,7 @@ class DemoController extends Controller
     
     
     /**
-     * @Route("/{_locale}/place", name="place", defaults={"_locale": "pl"}, requirements={"_locale": "pl|en"})
+     * @Route("/{_locale}/place", name="place", requirements={"_locale": "pl|en"})
      * @Template()
      */
     public function placeAction()
