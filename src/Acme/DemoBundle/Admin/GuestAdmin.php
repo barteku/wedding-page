@@ -61,6 +61,7 @@ class GuestAdmin extends BaseAdmin {
         $filter
             ->add('first_name')
             ->add('last_name')
+            ->add('email')
         ;
     }
     

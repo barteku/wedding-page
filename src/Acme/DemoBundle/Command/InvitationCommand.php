@@ -32,12 +32,17 @@ class InvitationCommand extends ContainerAwareCommand {
         
         $im = $this->getContainer()->get('acme.invitation.manager');
         if($email != null){
-            $guest = $im->findOneBy(array('email' => $email));
-            if($im->sendInvitation($guest)){
-                $counter++;
+            $guests = $im->findBy(array('email' => $email));
+            foreach($guests as $guest){
+                if($guest->getFirstName() != 'Włodzimierz'){
+                    //if($im->sendInvitation($guest)){
+                    //    $counter++;
+                    //}
+                    echo $guest->getFullname();
+                }
             }
         }else{
-            $counter = $im->sendToAll();
+            //$counter = $im->sendToAll();
         }       
         
 

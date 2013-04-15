@@ -44,9 +44,20 @@ place-text: >
   
 place-title: Gdzie
 
+gifts-title: Prezenty
+gifts-content: >
+    Prezenty są ślubu miłym dodatkiem,<br/>
+    ale nie zawsze trafnym wydatkiem.<br/>
+    Sponsorów szukamy remontu mieszkania,<br/>
+    Więc problem prezentów jest do rozwiązania.<br/>
+    Mile widzianym i bardzo gustownym,<br/>
+    Będzie bilecik ze znakiem wodnym.
+  
+  
 
 mainmenu-place: Miejsce
 mainmenu-registration: Rejestracja
+mainmenu-gifts: Prezenty
 mainmenu-contact: Kontakt
 
 registration-thankyou: >
@@ -54,3 +65,4 @@ registration-thankyou: >
   <p>Do zobaczenia na weselu</p>
   
 submit: zapisz
+

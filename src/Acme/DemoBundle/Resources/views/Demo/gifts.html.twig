@@ -1,0 +1,25 @@
+{% extends "AcmeDemoBundle::layout.html.twig" %}
+
+{% block title "Joasia i Bartek" %}
+
+{% block content %}
+    <div class="hero-unit">
+        <h1>{{ 'gifts-title'|trans }}</h1>
+    </div>
+    <div class="row main-content">
+        
+        <div class="span12">
+            <div class="well well-large" style="padding-top: 40px;" >      
+                <div class="pull-left" style="text-align: center; font-size: 160%; line-height: 34px; padding-top: 20px;">
+                    {{ 'gifts-content'|trans|raw }}
+                </div>
+       
+                <div class="pull-right">       
+                    <img src="img/giftbox.png"/>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

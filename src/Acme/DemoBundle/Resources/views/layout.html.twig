@@ -3,7 +3,7 @@
 
 {% block body %}
     {% block content_header %}
-        <div class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -16,6 +16,7 @@
                         <ul class="nav">
                             <li class="active"><a href="{{ path('homepage_locale', {'_locale': app.request.locale}) }}">Home</a></li>
                             <li><a href="{{ path('place', {'_locale': app.request.locale}) }}">{{ 'mainmenu-place'|trans }}</a></li>
+                            <li><a href="{{ path('gifts', {'_locale': app.request.locale}) }}">{{ 'mainmenu-gifts'|trans }}</a></li>
                             <li><a href="{{ path('registration', {'_locale': app.request.locale}) }}">{{ 'mainmenu-registration'|trans }}</a></li>
                             <li><a href="{{ path('contact', {'_locale': app.request.locale}) }}">{{ 'mainmenu-contact'|trans }}</a></li>
                         </ul>

@@ -105,4 +105,14 @@ class DemoController extends Controller
     {
         return array();
     }
+    
+    
+    /**
+     * @Route("/{_locale}/gifts", name="gifts", defaults={"_locale": "pl"}, requirements={"_locale": "pl|en"})
+     * @Template()
+     */
+    public function giftsAction()
+    {
+        return array();
+    }
 }

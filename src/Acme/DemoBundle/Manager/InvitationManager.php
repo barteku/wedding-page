@@ -122,7 +122,7 @@ class InvitationManager {
                     ->setBcc('urbanski.bartek@gmail.com')
                     ->setContentType("text/html")
                     ;
-            return $this->mailer->send($message);
+            //return $this->mailer->send($message);
         }
     }
     
