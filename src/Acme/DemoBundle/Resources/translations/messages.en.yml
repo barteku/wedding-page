@@ -52,6 +52,7 @@ gifts-content: >
 mainmenu-place: Place
 mainmenu-registration: Registration
 mainmenu-contact: Contact
+mainmenu-gifts: Gifts
 
 registration-thankyou: >
   <h2>Thank you for filling out the registration form </h2>
